@@ -15,6 +15,25 @@ describe('Birthnumber', () => {
     });
 })
 
+describe('Accountnumber', () => {
+    it('should fail on account numbers longer than 11 digits', () => {
+        const res = validator.accountNumber(123456789456);
+        expect(res).to.equal(false);
+    });
+    it('should fail on account numbers shorter than 11 digits', () => {
+        const res = validator.accountNumber(123456789);
+        expect(res).to.equal(false);
+    });
+    it('should accept 11 digit valid numbers', () => {
+        const res = validator.accountNumber(12345678911);
+        expect(res).to.equal(true);
+    })
+    it('should accept standard format numbers', () => {
+        const res = validator.accountNumber('1234.56.78911');
+        expect(res).to.equal(true);
+    })
+});
+
 
 /* General testing of isAnyOfFnrDnrOrg */
 describe('Fødselsnummer?', () => {
