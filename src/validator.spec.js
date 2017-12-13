@@ -13,7 +13,14 @@ describe('Birthnumber', () => {
         const res = validator.birthNumber(2707841373);
         expect(res).to.equal(false);
     });
-})
+});
+
+describe('Kid-number', () => {
+    it('should validate kid-number', () => {
+        const res = validator.birthNumber('saft');
+        expect(res).to.equal(true);
+    });
+});
 
 describe('Accountnumber', () => {
     it('should fail on account numbers longer than 11 digits', () => {
@@ -33,6 +40,21 @@ describe('Accountnumber', () => {
         expect(res).to.equal(true);
     })
 });
+
+describe('Org.Numbers', () => {
+    it('should accept valid Org.numbers', () => {
+        const res = validator.organizationNumber(914588200);
+        expect(res).to.equal(true);
+    });
+    it('should fail on to few digits', () => {
+        const res = validator.organizationNumber(91458820);
+        expect(res).to.equal(false);
+    });
+    it('should fail on to many digits', () => {
+        const res = validator.organizationNumber(9145882001);
+        expect(res).to.equal(false);
+    });
+})
 
 
 /* General testing of isAnyOfFnrDnrOrg */
