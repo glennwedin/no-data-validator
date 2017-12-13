@@ -1,0 +1,22 @@
+{
+  "name": "no-data-validator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/validator.js",
+  "scripts": {
+    "test": "mocha ./src/*.spec.js",
+    "lint": "eslint src/**/*.js",
+    "lint:fix": "eslint --fix src/**/*.js",
+    "build": "npm test && babel src/ --out-dir dist/",
+    "prepublish": "npm run lint && npm run build"
+  },
+  "author": "Glenn Wedin",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "chai": "^4.1.2",
+    "eslint": "^4.13.1",
+    "mocha": "^4.0.1"
+  }
+}
