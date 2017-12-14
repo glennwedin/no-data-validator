@@ -16,9 +16,13 @@ describe('Birthnumber', () => {
 });
 
 describe('Kid-number', () => {
-    it('should validate kid-number', () => {
-        const res = validator.birthNumber('saft');
+    it('should accept valid kid-number', () => {
+        const res = validator.kidNumber('2707841373001170014');
         expect(res).to.equal(true);
+    });
+    it('should fail on invalid kid-number', () => {
+        const res = validator.kidNumber('2707841373001170015');
+        expect(res).to.equal(false);
     });
 });
 
