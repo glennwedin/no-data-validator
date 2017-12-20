@@ -60,37 +60,3 @@ describe('Org.Numbers', function () {
         expect(res).to.equal(false);
     });
 });
-
-/* General testing of isAnyOfFnrDnrOrg */
-describe('Fødselsnummer?', function () {
-    it('Should fail', function () {
-        var result = validator.isAnyOfFnrDnrOrg('2707841373');
-        expect(result).to.equal(false);
-    });
-    it('Should succeed', function () {
-        var result = validator.isAnyOfFnrDnrOrg('27078413730');
-        expect(result).to.equal(true);
-    });
-});
-
-describe('D-nummer?', function () {
-    it('Should fail', function () {
-        var result = validator.isAnyOfFnrDnrOrg('71129004717');
-        expect(result).to.equal(false);
-    });
-    it('Should succeed', function () {
-        var result = validator.isAnyOfFnrDnrOrg('71129004716');
-        expect(result).to.equal(true);
-    });
-});
-
-describe('Org.nummer?', function () {
-    it('Should fail', function () {
-        var result = validator.isAnyOfFnrDnrOrg('964806234');
-        expect(result).to.equal(false);
-    });
-    it('Should succeed', function () {
-        var result = validator.isAnyOfFnrDnrOrg('964806233');
-        expect(result).to.equal(true);
-    });
-});
