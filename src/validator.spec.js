@@ -58,39 +58,4 @@ describe('Org.Numbers', () => {
         const res = validator.organizationNumber(9145882001);
         expect(res).to.equal(false);
     });
-})
-
-
-/* General testing of isAnyOfFnrDnrOrg */
-describe('Fødselsnummer?', () => {
-    it('Should fail', () => {
-        const result = validator.isAnyOfFnrDnrOrg('2707841373');
-        expect(result).to.equal(false);
-    });
-    it('Should succeed', () => {
-        const result = validator.isAnyOfFnrDnrOrg('27078413730');
-        expect(result).to.equal(true);
-    });
-});
-
-describe('D-nummer?', () => {
-    it('Should fail', () => {
-        const result = validator.isAnyOfFnrDnrOrg('71129004717');
-        expect(result).to.equal(false);
-    });
-    it('Should succeed', () => {
-        const result = validator.isAnyOfFnrDnrOrg('71129004716');
-        expect(result).to.equal(true);
-    });
-});
-
-describe('Org.nummer?', () => {
-    it('Should fail', () => {
-        const result = validator.isAnyOfFnrDnrOrg('964806234');
-        expect(result).to.equal(false);
-    });
-    it('Should succeed', () => {
-        const result = validator.isAnyOfFnrDnrOrg('964806233');
-        expect(result).to.equal(true);
-    });
 });

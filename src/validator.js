@@ -81,14 +81,9 @@ const luhnValue = (number) => {
     return 10 - parseInt(sum.charAt(sum.length - 1), 10);
 };
 
-const isAnyOfFnrDnrOrg = (num) => {
-    return birthNumber(num) || organizationNumber(num);
-};
-
 module.exports = {
     accountNumber: accountNumber,
     organizationNumber: organizationNumber,
     birthNumber: birthNumber,
-    kidNumber: kidNumber,
-    isAnyOfFnrDnrOrg: isAnyOfFnrDnrOrg,
+    kidNumber: kidNumber
 };
