@@ -1,6 +1,6 @@
 {
   "name": "no-data-validator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "./dist/validator.js",
   "scripts": {
