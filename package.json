@@ -1,7 +1,7 @@
 {
   "name": "no-data-validator",
   "version": "1.0.1",
-  "description": "",
+  "description": "A validator for norwegian birthnumbers, accountnumbers, kidnumbers and org.numbers",
   "main": "./dist/validator.js",
   "scripts": {
     "test": "mocha ./src/*.spec.js",
@@ -10,6 +10,16 @@
     "build": "npm test && babel src/ --out-dir dist/",
     "prepublish": "npm run lint && npm run build"
   },
+  "keywords": [
+    "kidnumber",
+    "kid",
+    "validator",
+    "birthnumber",
+    "fødselsnummer",
+    "orgnummer",
+    "orgnumber",
+    "kontonummer"
+  ],
   "author": "Glenn Wedin",
   "license": "MIT",
   "repository": {
